@@ -86,29 +86,25 @@ export default function MonthlyStatsScreen() {
    
     <FlatList
   data={monthlyStats}
-  key={`columns-${3}`}
+  key={`columns-${1}`}
   keyExtractor={(item) => item.month.toString()}
-  numColumns={3}
+  numColumns={1}
   renderItem={({ item }) => (
     <ThemedView
       style={{
         padding: 8,
         margin: '1%',
-        width: '30%',
         borderRadius: 8,
         backgroundColor: colorScheme === 'dark' ? '#222222' : '#F0F4FF',
-        flexDirection: 'row', 
-        alignItems: 'flex-start',
+        alignItems: 'center',
         justifyContent: 'space-between', 
       }}
     >
-      {/* Left: Graph */}
       <SingleMonthChart
         singleMonthData={item}
         maxDistance={maxDistance}
       />
 
-      <View style={{ flex: 1, marginLeft: 20 }}>
         <ThemedText
           type="title"
           style={{
@@ -138,7 +134,6 @@ export default function MonthlyStatsScreen() {
         >
           View Activities
         </ThemedText>
-      </View>
     </ThemedView>
   )}
 />

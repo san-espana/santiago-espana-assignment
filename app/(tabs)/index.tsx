@@ -32,10 +32,11 @@ function HomeScreen() {
         />
       }>
       {user ? (
-        <ThemedView style={styles.loggedInContainer}>
+        <ThemedView>
+          
           <View style={styles.userInfo}>
             <ThemedText type="title">Welcome back, {user.firstname}!</ThemedText>
-            <ThemedText type="subtitle">Let’s make today awesome!</ThemedText>
+            <ThemedText style={{marginTop:10}} type="subtitle">Let’s make today awesome!</ThemedText>
           </View>
 
           <View style={styles.dashboard}>
@@ -54,9 +55,7 @@ function HomeScreen() {
             <ThemedText>- Fixed bugs with Strava API sync.</ThemedText>
           </ThemedView>
 
-          <View style={styles.logOutButtonContainer}>
             <ThemedButton title="Log Out" onPress={handleLogOut} type="red" />
-          </View>
         </ThemedView>
       ) : (
         <>
@@ -102,43 +101,20 @@ const styles = StyleSheet.create({
     left: 0,
     position: 'absolute',
   },
-  loggedInContainer: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    padding: 16,
-  },
   userInfo: {
     marginBottom: 16,
-    alignItems: 'center',
   },
-  logOutButtonContainer: {
-    position: 'absolute',
-    top: 16,
-    right: 16,
-  },dashboard: {
-    marginVertical: 16,
-    alignItems: 'center',
-  },
-  quickActions: {
-    flexDirection: 'row',
-    justifyContent: 'space-around',
+  dashboard: {
     marginVertical: 16,
   },
   quoteContainer: {
     marginVertical: 16,
-    alignItems: 'center',
   },
   updates: {
     marginVertical: 16,
     padding: 16,
     borderRadius: 8,
-  },
-  chart: {
-    marginVertical: 16,
-    alignSelf: 'stretch',
-    height: 200,
-  },
+  }
 });
 
 export default HomeScreen;
