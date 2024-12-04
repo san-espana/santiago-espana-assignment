@@ -45,11 +45,11 @@ export default function ActivitiesScreen() {
   return (
     <ThemedView style={{ flex: 1, padding: 16 }}>
       {user ? (
-      <ThemedView style={{ flexDirection: 'row', alignItems: 'center', marginBottom: 16 }}>
+      <ThemedView style={{ alignItems: 'center', marginBottom: 16 }}>
        <ThemedText type="title" style={{ marginRight: 8 }}>
           Recent Activities
         </ThemedText>
-        {month && <ThemedButton title="Show all activities" onPress={removeMonthFilter} />}
+        {month && <ThemedButton style={{ marginTop: 10 }} title="Show all activities" onPress={removeMonthFilter} />}
       </ThemedView>
       ) : (
 <>
@@ -78,13 +78,12 @@ export default function ActivitiesScreen() {
       )}
       <FlatList
         data={displayData}
-        key={`columns-${4}`}
-        numColumns={4}
+        key={`columns-${1}`}
+        numColumns={1}
         keyExtractor={(item) => item.id.toString()}
         renderItem={({ item }) => (
           <ThemedView
           style={{
-            width: '22%',
             padding: 8,
             margin: '1%',
             borderRadius: 8,
@@ -99,9 +98,6 @@ export default function ActivitiesScreen() {
             <ThemedText>Elevation: {item.total_elevation_gain} m</ThemedText>
           </ThemedView>
         )}
-        columnWrapperStyle={{
-          justifyContent: 'flex-start',
-        }}
         />
     </ThemedView>
   );
