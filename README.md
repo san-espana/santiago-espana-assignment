@@ -74,10 +74,10 @@ Follow these steps to set up and run the project:
 ## Areas for Improvement  
 
 ### Library Compatibility  
-- Faced issues installing libraries like `victory-native` (for more interactive graphs), `react-native-toast-message`, and `lottie-react-native`. Resolving these issues would significantly enhance the app's visual appeal and user interaction.  
+- Faced issues installing libraries like `victory-native` (for more interactive graphs), `react-native-toast-message`, and `Lottie-react-native`. Resolving these issues would significantly enhance the app's visual appeal and user interaction.  
 
 ### Error Handling  
-- Replace all `console.log` statements with proper toast notifications (e.g., toastrs) to provide better user feedback and improve the overall user experience.  
+- Replace all `console.log` statements with proper toast notifications (e.g., toasts) to provide better user feedback and improve the overall user experience.  
 
 ### Graph Improvements  
 - Address existing errors logged during graph rendering.  
@@ -85,6 +85,7 @@ Follow these steps to set up and run the project:
 
 ### Background and Theme  
 - Encountered bugs when attempting to change the background color of the app based on the theme.  
+- The charts and other theme-related views might require changing the theme back and forth before they react to the changes.
 - Fixing this issue would allow for more dynamic and visually appealing designs.  
 
 ### Placeholders  
